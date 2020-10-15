@@ -1,21 +1,47 @@
-﻿using System;
+﻿// Copyright 2020,All Rights Reserved, Kenan Marriott-Baillie 
+using System;
 
 namespace ADVENTURE //random change
 {
+
     class Program
     {
-        static void example(string name = "kenan")
-        { // function 
-            name = "shawn";
-        }
+         static void SayWelcome() // this is my function to welcome the player
+         {
+            Console.WriteLine("Welcome to your adventure!!");       
+         }   
         
 
         static void Main(string[] args)
         {
-           example();
-            Console.WriteLine("Welcome to your adventure!!");
+        SayWelcome(); // this is me calling that function 
             
+            
+            // display location
+            // write dialogue (if there is any)
+            // prompt player for action
+            //
+
+            
+
+
+
+
             bool isvalidinput = false;
+            Map theMap = new Map ( 5 );
+            theMap.Init();    
+
+            int locX = 0;
+            int locY = 0;
+            theMap.GetLocation(locX,locY);
+            locX = 1;
+            locY = 2;
+            locX = 4;
+            locY = 5;
+
+            string [,] gameMap = new string[5,5];
+            
+
             string[] dialogueList = new string[20];
             string[] promptList = new string[20];
             string[] locationList = new string[20];
